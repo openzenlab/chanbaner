@@ -1,0 +1,16 @@
+# Render.com deployment configuration
+services:
+  - type: web
+    name: koan-orchestrator
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: LOG_LEVEL
+        value: INFO
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+    healthCheckPath: /health

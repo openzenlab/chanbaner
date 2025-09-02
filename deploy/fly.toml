@@ -1,0 +1,25 @@
+# Fly.io deployment configuration
+app = "chanbaner-koan"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "backend/Dockerfile"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[http_service.checks]]
+  interval = "15s"
+  grace_period = "5s"
+  method = "GET"
+  path = "/health"
+  protocol = "http"
+  timeout = "10s"
+
+[env]
+  LOG_LEVEL = "INFO"
