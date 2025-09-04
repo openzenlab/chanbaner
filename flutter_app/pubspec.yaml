@@ -36,8 +36,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
-  fonts:
-    - family: NotoSansCJK
-      fonts:
-        - asset: assets/fonts/NotoSansCJK-Regular.ttf

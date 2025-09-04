@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
         title: 'ChanBaner',
         theme: ThemeData(
           primarySwatch: Colors.brown,
-          fontFamily: 'NotoSansCJK',
           textTheme: const TextTheme(
             bodyLarge: TextStyle(fontSize: 16),
             bodyMedium: TextStyle(fontSize: 14),
